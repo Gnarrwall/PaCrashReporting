@@ -1,0 +1,122 @@
+<style>
+.angular-google-map-container { height: 400px; }
+.getcent {
+
+width: 100%;
+
+
+}
+
+.getit {
+
+  height: 300px;
+  overflow-y: auto;
+
+
+}
+
+.center {
+
+    width: 100%;
+    text-align:center;
+    padding-bottom: 1.5%;
+
+}
+
+#stop {
+
+
+  float: right;
+
+}
+
+</style>
+
+<div id="map_canvas" ng-controller="InteractiveMapDrawingCtrl">
+
+    <ui-gmap-google-map center="map.center" zoom="map.zoom" options="options">
+
+      <ui-gmap-markers
+       models="markers"
+       coords="'self'"
+       icon="'icon'"
+       click="'onClick'"
+       options="'options'"
+       options=""></ui-gmap-markers>
+
+
+
+
+
+    </ui-gmap-google-map>
+
+</div>
+
+
+
+
+
+<div class = "getit">
+
+  <ul class="list-group">
+
+
+
+
+  <!-- Going to NG-Repeat this tag -->
+
+    <li ng-repeat="i in repeatHelper" class="list-group-item">
+      <a href="javascript:void(0)" ng-click="addMarkerToMap(0, i)" class="badge">{{buttonText[i]}}
+        <span ng-class="{'glyphicon glyphicon-plus': showIcon[i], 'glyphicon glyphicon-minus': !showIcon[i]}"></span></a>
+
+        <a ng-show="!showIcon[i]" ng-click="rotateMarker(i)" ng-mousedown="mouseDown(i)" ng-mouseup="mouseUp()" href="javascript:void(0)" class="badge">
+          <span class="glyphicon glyphicon-repeat"></span></a>
+
+          <a ng-show="!showIcon[i] && showPolylineIcon[i]" ng-click="addPolyLine(i)" href="javascript:void(0)" class="badge">Polyline
+            <span ng-class="{'glyphicon glyphicon-pencil': showDrawingIcon[i], 'glyphicon glyphicon-ok': !showDrawingIcon[i]}"></span></a>
+
+      Car number {{i+1}}
+    </li>
+
+
+  <!--      -->
+
+
+
+
+
+    <li class="list-group-item">
+      <a href="javascript:void(0)" ng-click="john = john + 1" class="badge">Add <span class="glyphicon glyphicon-plus"></span></a>
+      Cras justo odio
+    </li>
+    <li class="list-group-item">
+      <a href="javascript:void(0)" ng-click="john = john + 1" class="badge">Add <span class="glyphicon glyphicon-plus"></span></a>
+      Cras justo odio
+    </li>
+    <li class="list-group-item">
+      <a href="javascript:void(0)" ng-click="john = john + 1" class="badge">Add <span class="glyphicon glyphicon-plus"></span></a>
+      Cras justo odio
+    </li>
+    <li class="list-group-item">
+      <a href="javascript:void(0)" ng-click="john = john + 1" class="badge">Add <span class="glyphicon glyphicon-plus"></span></a>
+      Cras justo odio
+    </li>
+
+  </ul>
+
+</div>
+
+<a ng-click="startAnimation()" class="btn btn-sm btn-info">Start Animation</a>
+<a id = "stop" ng-click="stopAnimation()" class="btn btn-sm btn-info">Stop Animation</a>
+
+<div class="center">
+
+<a id = "continueButton" ng-click="continueButtonCtrl()" class="btn btn-lg btn-success">Next</a>
+
+</div>
+
+<!--
+
+<img src="https://maps.googleapis.com/maps/api/staticmap?center=Brooklyn+Bridge,New+York,NY&zoom=13&size=600x300&maptype=hybrid
+&markers=color:blue%7Clabel:S%7C40.702147,-74.015794&markers=color:green%7Clabel:G%7C40.711614,-74.012318
+&markers=color:red%7Clabel:C%7C40.718217,-73.998284">  -->

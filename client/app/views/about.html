@@ -1,0 +1,277 @@
+
+<style>
+
+h2 {
+
+font-size: 100%;
+
+}
+
+#nameForm {
+
+ width: 50%;
+
+}
+
+#outsideForm {
+
+  padding-top: 7%;
+  padding-bottom:5%;
+
+}
+
+#b1 {
+
+  width: 20%;
+  margin-bottom: 5%;
+
+}
+
+.killinEeet {
+
+  margin-top: 2%;
+  margin-bottom:2%;
+
+}
+
+.centerIt {
+
+text-align: center;
+margin-top: 1%;
+
+}
+
+.dicks {
+
+
+  cursor: pointer;
+  role="button";
+}
+
+
+#dick {
+
+
+    cursor: pointer;
+    role="button";
+}
+
+
+#smallify {
+
+  height: 50px; width: 200px;
+  line-height: 20px;
+  font-size: 100%;
+  margin-right: 10%;
+
+}
+
+
+#smallify1 {
+
+  height: 50px; width: 200px;
+  line-height: 20px;
+  font-size: 100%;
+  margin-left: 10%
+
+}
+
+</style>
+
+<div class = "centerIt">
+<h1>Police Agency Data</h1>
+</div>
+
+<!--
+
+  <form id = outsideForm>
+            <input ng-model="inputNameValue" id = nameForm type="text" placeholder="Please Enter a Name for This Report">
+  </form>
+
+
+  <a id = "b1" ng-click="clickMe($event)" class="btn btn-lg btn-success">{{buttonText}}</a>
+
+-->
+
+
+
+
+
+
+<div class="jumbotron">
+
+
+  <div class="panel panel-info">
+    <div class="panel-heading">To Be Completed At The Time of Incident</div>
+    <div class="panel-body">
+
+<div class="input-group">
+  <input type="text" class="form-control" ng-model="agencyData[0]" placeholder="Incident Number">
+  <span class="input-group-addon"><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
+</div>
+
+
+<div class=killinEeet></div>
+
+
+
+
+
+    <div class="row">
+        <div class='col-sm-8'>
+            <div class="form-group">
+                <div class='input-group date'>
+                    <input type='text' class="form-control" ng-model="agencyData[1]" placeholder="Incident Date"/>
+                    <span id="dick" class="input-group-addon" ng-click="getDate()">
+                        <span class="glyphicon glyphicon-calendar"></span>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <input type="text"  class="form-control" ng-model="agencyData[2]" placeholder="Police Agency Name" aria-describedby="basic-addon1">
+
+
+    <div class=killinEeet></div>
+
+
+    <input type="text"  class="form-control" ng-model="agencyData[3]" placeholder="Agency Number" aria-describedby="basic-addon1">
+
+
+    <div class=killinEeet></div>
+
+
+    <div class="row">
+        <div class='col-sm-8'>
+            <div class="form-group">
+                <div class='input-group date'>
+                    <input type='text' class="form-control" ng-model="agencyData[4]" placeholder="Dispatch Time"/>
+                    <span id="dick" class="input-group-addon" ng-click="getDispatchTime()">
+                        <span class="glyphicon glyphicon-calendar"></span>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class='col-sm-8'>
+            <div class="form-group">
+                <div class='input-group date'>
+                    <input type='text' class="form-control" ng-model="agencyData[5]" placeholder="Arrival Time"/>
+                    <span id="dick" class="input-group-addon" ng-click="getArrivalTime()">
+                        <span class="glyphicon glyphicon-calendar"></span>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+<input type="text"  class="form-control" ng-model="agencyData[6]" placeholder="Precinct" aria-describedby="basic-addon1">
+
+
+<div class=killinEeet></div>
+
+
+<input type="text"  class="form-control" ng-model="agencyData[7]" placeholder="Patrol Zone" aria-describedby="basic-addon1">
+
+
+<div class=killinEeet></div>
+
+<input type="text"  class="form-control" ng-model="agencyData[8]" placeholder="Investigator" aria-describedby="basic-addon1">
+
+
+<div class=killinEeet></div>
+
+
+<input type="text"  class="form-control" ng-model="agencyData[9]" placeholder="Investigator Badge Number" aria-describedby="basic-addon1">
+
+
+<div class=killinEeet></div>
+
+
+
+</div>
+</div>
+
+<div class="panel panel-info">
+  <div class="panel-heading">To Be Completed At Time of Review</div>
+  <div class="panel-body">
+
+
+<input type="text"  class="form-control" ng-model="agencyData[10]" placeholder="Reviewer" aria-describedby="basic-addon1">
+
+
+<div class=killinEeet></div>
+
+
+<input type="text"  class="form-control" ng-model="agencyData[11]" placeholder="Reviewer Badge Number" aria-describedby="basic-addon1">
+
+<div class=killinEeet></div>
+
+
+<div class="row">
+    <div class='col-sm-8'>
+        <div class="form-group">
+            <div class='input-group date'>
+                <input type='text' class="form-control" ng-model="agencyData[12]" placeholder="Review Date"/>
+                <span id="dick" class="input-group-addon" ng-click="getReviewDate()">
+                    <span class="glyphicon glyphicon-calendar"></span>
+                </span>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+</div>
+</div>
+
+<!--Beginning of Toggle Buttons-->
+
+<span>
+
+  <!-- Single button -->
+  <div class="btn-group">
+    <button id="smallify" type="button" ng-class="{'btn btn-info dropdown-toggle': caseOpen, 'btn btn-success dropdown-toggle': !caseOpen}" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      {{caseOpenText}} <span class="caret"></span>
+    </button>
+    <ul class="dropdown-menu">
+      <li><a class="dicks" ng-click="toggleCaseOpen(true)">Case Open</a></li>
+      <li role="separator" class="divider"></li>
+      <li><a class="dicks" ng-click="toggleCaseOpen(false)">Case Closed</a></li>
+    </ul>
+  </div>
+
+
+  <!-- Single button -->
+  <div class="btn-group">
+    <button id="smallify1" type="button" ng-class="{'btn btn-info dropdown-toggle': !reportableCrash, 'btn btn-success dropdown-toggle': reportableCrash}" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      {{reportableCrashText}} <span class="caret"></span>
+    </button>
+    <ul class="dropdown-menu">
+      <li><a class="dicks" ng-click="toggleReportableCrash(true)">Reportable Crash</a></li>
+      <li role="separator" class="divider"></li>
+      <li><a class="dicks" ng-click="toggleReportableCrash(false)">Non-Reportable Crash</a></li>
+    </ul>
+  </div>
+
+</span>
+
+<!--End of Toggle Buttons-->
+
+
+</div> <!-- End of JumboTron -->
+
+
+
+</span>
+
+<div class="centerIt">
+<a id = "b1" ng-click="continue()" class="btn btn-lg btn-success">{{buttonText}}</a>
+</div>

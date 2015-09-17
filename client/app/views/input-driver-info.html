@@ -1,0 +1,127 @@
+<style>
+
+
+p1 {
+
+  font-size: 210%;
+
+
+}
+
+.center {
+
+  width: 100%;
+  text-align:center;
+
+
+}
+
+.killinEeet {
+
+margin-top: 2%;
+margin-bottom:2%;
+
+}
+
+.dicks {
+
+
+  cursor: pointer;
+  role="button";
+}
+
+#continueButton {
+
+  width: 20%;
+
+}
+
+
+
+</style>
+
+
+<div class="page-header">
+  <h1>Please Enter Driver Info <small>For Driver Number {{currentIndex+1}}</small></h1>
+</div>
+
+<!--Beg Of JumboTron-->
+<div class="jumbotron">
+
+
+<div class="input-group">
+  <input type="text" class="form-control" ng-model="name" placeholder="First and Last Name">
+  <span class="input-group-addon"><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
+</div>
+
+<div class=killinEeet></div>
+
+  <input type="text"  class="form-control" ng-model="dlNumber" placeholder="Drivers Lisence Number" aria-describedby="basic-addon1">
+
+<div class=killinEeet></div>
+
+  <input type="text"  class="form-control" ng-model="cellPhone" placeholder="Cell Phone #" aria-describedby="basic-addon1">
+
+<div class=killinEeet></div>
+
+  <input type="text" class="form-control" ng-model="address" placeholder="Address" aria-describedby="basic-addon1">
+
+<div class=killinEeet></div>
+
+  <input type="text" class="form-control" ng-model="social" placeholder="SSN" aria-describedby="basic-addon1">
+
+<div class=killinEeet></div>
+
+  <div class="input-group">
+    <input type="text" class="form-control" ng-model="email" placeholder="Email Address" aria-describedby="basic-addon2">
+    <span class="input-group-addon" id="basic-addon2">@example.com</span>
+  </div>
+
+
+<div class=killinEeet></div>
+
+  <textarea id="statement" class="form-control" ng-model="statement" placeholder="Drivers Statement" cols="50" rows="10"></textarea>
+
+
+</div>
+<!--End of JumboTron-->
+
+
+
+<div class="alert alert-danger" ng-show="displayErrorMessage" display="none" role="alert">Please input all starred fields on page(s) {{pagesWithErrors}}</div>
+
+
+
+
+<div class = "center">
+
+
+  <a id = "continueButton" ng-show="onLastPane" ng-click="continueButtonCtrl()" class="btn btn-lg btn-success">Next</a>
+
+
+
+<!-- Nav Bar Begins Here -->
+<nav>
+  <ul class="pagination">
+    <li>
+      <a href="javascript:void(0)" ng-click="moveToPreviousPage()" aria-label="Previous">
+        <span aria-hidden="true">&laquo;</span>
+      </a>
+    </li>
+<!--       Create Dynamic List Based on Number Of Users -->
+
+
+    <li ng-repeat="i in repeatHelper" ng-class="{'active':i == currentIndex}">
+      <a href="javascript:void(0)" class = "dicks" ng-click="createPagination(i)">{{i+1}}</a>
+    </li>
+
+
+    <li>
+      <a href="javascript:void(0)" ng-click="moveToNextPage()" aria-label="Next">
+        <span aria-hidden="true">&raquo;</span>
+      </a>
+    </li>
+  </ul>
+</nav>
+
+</div>

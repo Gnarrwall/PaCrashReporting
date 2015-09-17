@@ -1,0 +1,305 @@
+
+<style>
+
+h1 {
+
+  text-align:center;
+
+}
+
+#getsmall {
+
+line-height: 5px;
+height: 34px;
+
+
+}
+
+#spacerDiv {
+
+   margin: 1%;
+
+}
+
+.dicks {
+
+
+  cursor: pointer;
+  role="button";
+}
+
+.center {
+
+  text-align: center;
+  margin-bottom: 5%;
+
+}
+
+.test {
+
+  padding-bottom: 0%;
+
+}
+
+.smallify {
+
+font-size: 50px;
+
+}
+
+#button {
+
+  height: 50px; width: 250px;
+  line-height: 20px;
+  font-size: 100%;
+  margin-right: 10%;
+  text-align: center;
+
+}
+
+
+
+</style>
+
+
+
+
+<div id="headerDiv"><h1>{{questionMessage}}</h1></div>
+
+
+
+
+<div ng-show="!doneWithNumbers" class="jumbotron">
+
+  <button id = "b6"  ng-click="numberWasPressed(1)" class="btn btn-lg btn-info">1</button>
+  <button id = "b7"  ng-click="numberWasPressed(2)" class="btn btn-lg btn-info">2</button>
+  <button id = "b8"  ng-click="numberWasPressed(3)" class="btn btn-lg btn-info">3</button>
+  <button id = "b9"  ng-click="numberWasPressed(4)" class="btn btn-lg btn-info">4</button>
+  <button id = "b10" ng-click="numberWasPressed(5)" class="btn btn-lg btn-info">5</button>
+  <button id = "b11" ng-click="numberWasPressed(6)" class="btn btn-lg btn-info">6</button>
+  <button id = "b12" ng-click="numberWasPressed(7)" class="btn btn-lg btn-info">7</button>
+  <button id = "b13" ng-click="numberWasPressed(8)" class="btn btn-lg btn-info">8</button>
+
+
+<div id="spacerDiv"></div>
+
+
+
+    <div class="input-group">
+      <input ng-model="numberOfCurrent" type="text" class="form-control" placeholder="Enter Custom #">
+      <span class="input-group-btn">
+      <button ng-click="numberWasPressed(numberOfCurrent)" class="btn btn-lg btn-info" id="getsmall" type="button">Next</button>
+      </span>
+    </div><!-- /input-group -->
+
+
+
+</div>
+
+
+<div ng-show="!doneWithBooleans" class="jumbotron">
+
+  <button  ng-click="booleanWasPressed(true)" class="btn btn-lg btn-info">Yes</button>
+  <button  ng-click="booleanWasPressed(false)" class="btn btn-lg btn-info">No</button>
+
+
+
+</div>
+
+
+
+<div ng-show="!doneWithSelects" class="jumbotron">
+
+
+<div class="test">
+
+<h4>Traffic Control Device</h4>
+
+
+
+
+  <!-- Split button -->
+  <div class="btn-group">
+
+
+    <button id="button" type="button" ng-class="{'btn btn-info dropdown-toggle': !allSet[0], 'btn btn-success dropdown-toggle': allSet[0]}" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      {{tcd}} <span class="caret"></span>
+    </button>
+
+    <ul class="dropdown-menu">
+      <li><a class="dicks" ng-click="setTcd(0)">{{tcdArray[0]}}</a></li>
+      <li role="separator" class="divider"></li>
+      <li><a class="dicks" ng-click="setTcd(1)">{{tcdArray[1]}}</a></li>
+      <li role="separator" class="divider"></li>
+      <li><a class="dicks" ng-click="setTcd(2)">{{tcdArray[2]}}</a></li>
+      <li role="separator" class="divider"></li>
+      <li><a class="dicks" ng-click="setTcd(3)">{{tcdArray[3]}}</a></li>
+      <li role="separator" class="divider"></li>
+      <li><a class="dicks" ng-click="setTcd(4)">{{tcdArray[4]}}</a></li>
+      <li role="separator" class="divider"></li>
+      <li><a class="dicks" ng-click="setTcd(5)">{{tcdArray[5]}}</a></li>
+      <li role="separator" class="divider"></li>
+      <li><a class="dicks" ng-click="setTcd(6)">{{tcdArray[6]}}</a></li>
+      <li role="separator" class="divider"></li>
+      <li><a class="dicks" ng-click="setTcd(7)">{{tcdArray[7]}}</a></li>
+      <li role="separator" class="divider"></li>
+      <li><a class="dicks" ng-click="setTcd(8)">{{tcdArray[8]}}</a></li>
+      <li role="separator" class="divider"></li>
+      <li><a class="dicks" ng-click="setTcd(9)">{{tcdArray[9]}}</a></li>
+    </ul>
+  </div>
+
+
+
+</div>
+<div class="test">
+
+  <h4>TCD Functionality</h4>
+
+  <!-- Split button -->
+  <div class="btn-group">
+    <button id="button" type="button" ng-class="{'btn btn-info dropdown-toggle': !allSet[1], 'btn btn-success dropdown-toggle': allSet[0]}" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      {{tcdFunction}} <span class="caret"></span>
+    </button>
+
+    <ul class="dropdown-menu">
+      <li><a class="dicks" ng-click="setTcdFunction(0)">{{tcdFunctionsArray[0]}}</a></li>
+      <li role="separator" class="divider"></li>
+      <li><a class="dicks" ng-click="setTcdFunction(1)">{{tcdFunctionsArray[1]}}</a></li>
+      <li role="separator" class="divider"></li>
+      <li><a class="dicks" ng-click="setTcdFunction(2)">{{tcdFunctionsArray[2]}}</a></li>
+      <li role="separator" class="divider"></li>
+      <li><a class="dicks" ng-click="setTcdFunction(3)">{{tcdFunctionsArray[3]}}</a></li>
+      <li role="separator" class="divider"></li>
+      <li><a class="dicks" ng-click="setTcdFunction(4)">{{tcdFunctionsArray[4]}}</a></li>
+      <li role="separator" class="divider"></li>
+      <li><a class="dicks" ng-click="setTcdFunction(5)">{{tcdFunctionsArray[5]}}</a></li>
+    </ul>
+  </div>
+
+</div>
+
+<div class="test">
+
+  <h4>Time Lane Closed</h4>
+  <!-- Split button -->
+  <div class="btn-group">
+
+    <button id="button" type="button" ng-class="{'btn btn-info dropdown-toggle': !allSet[2], 'btn btn-success dropdown-toggle': allSet[2]}" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      {{timeLaneClosed}} <span class="caret"></span>
+    </button>
+
+    <ul class="dropdown-menu">
+      <li><a class="dicks" ng-click="setTimeClosed(0)">{{timeClosed[0]}}</a></li>
+      <li role="separator" class="divider"></li>
+      <li><a class="dicks" ng-click="setTimeClosed(1)">{{timeClosed[1]}}</a></li>
+      <li role="separator" class="divider"></li>
+      <li><a class="dicks" ng-click="setTimeClosed(2)">{{timeClosed[2]}}</a></li>
+      <li role="separator" class="divider"></li>
+      <li><a class="dicks" ng-click="setTimeClosed(3)">{{timeClosed[3]}}</a></li>
+      <li role="separator" class="divider"></li>
+      <li><a class="dicks" ng-click="setTimeClosed(4)">{{timeClosed[4]}}</a></li>
+      <li role="separator" class="divider"></li>
+      <li><a class="dicks" ng-click="setTimeClosed(5)">{{timeClosed[5]}}</a></li>
+      <li role="separator" class="divider"></li>
+      <li><a class="dicks" ng-click="setTimeClosed(6)">{{timeClosed[6]}}</a></li>
+    </ul>
+  </div>
+
+
+</div>
+<div class="test">
+
+  <h4>Extent of Lane Closure</h4>
+  <!-- Split button -->
+  <div class="btn-group">
+
+    <button id="button" type="button" ng-class="{'btn btn-info dropdown-toggle': !allSet[3], 'btn btn-success dropdown-toggle': allSet[3]}" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      {{typeOfLaneClosed}} <span class="caret"></span>
+    </button>
+
+
+    <ul class="dropdown-menu">
+      <li><a class="dicks" ng-click="setLaneClosedType(0)">{{laneClosedType[0]}}</a></li>
+      <li role="separator" class="divider"></li>
+      <li><a class="dicks" ng-click="setLaneClosedType(1)">{{laneClosedType[1]}}</a></li>
+      <li role="separator" class="divider"></li>
+      <li><a class="dicks" ng-click="setLaneClosedType(2)">{{laneClosedType[2]}}</a></li>
+      <li role="separator" class="divider"></li>
+      <li><a class="dicks" ng-click="setLaneClosedType(3)">{{laneClosedType[3]}}</a></li>
+    </ul>
+  </div>
+
+  </div>
+  <div class="test">
+
+    <h4>Traffic Detoured?</h4>
+  <!-- Split button -->
+  <div class="btn-group">
+
+
+    <button id="button" type="button" ng-class="{'btn btn-info dropdown-toggle': !allSet[4], 'btn btn-success dropdown-toggle': allSet[4]}" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      {{wasTrafficDetoured}} <span class="caret"></span>
+    </button>
+
+
+    <ul class="dropdown-menu">
+      <li><a class="dicks" ng-click="setTrafficDetoured(0)">{{trafficDetoured[0]}}</a></li>
+      <li role="separator" class="divider"></li>
+      <li><a class="dicks" ng-click="setTrafficDetoured(1)">{{trafficDetoured[1]}}</a></li>
+      <li role="separator" class="divider"></li>
+      <li><a class="dicks" ng-click="setTrafficDetoured(2)">{{trafficDetoured[2]}}</a></li>
+
+    </ul>
+  </div>
+
+
+</div>
+<div class="test">
+
+  <h4>Direction of Lane Closure</h4>
+  <!-- Split button -->
+  <div class="btn-group">
+
+    <button id="button" type="button" ng-class="{'btn btn-info dropdown-toggle': !allSet[5], 'btn btn-success dropdown-toggle': allSet[5]}" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      {{directionOfLaneClosure}} <span class="caret"></span>
+    </button>
+
+
+
+    <ul class="dropdown-menu">
+      <li><a class="dicks" ng-click="setLaneClosureDirection(0)">{{laneClosureDirection[0]}}</a></li>
+      <li role="separator" class="divider"></li>
+      <li><a class="dicks" ng-click="setLaneClosureDirection(1)">{{laneClosureDirection[1]}}</a></li>
+      <li role="separator" class="divider"></li>
+      <li><a class="dicks" ng-click="setLaneClosureDirection(2)">{{laneClosureDirection[2]}}</a></li>
+      <li role="separator" class="divider"></li>
+      <li><a class="dicks" ng-click="setLaneClosureDirection(3)">{{laneClosureDirection[3]}}</a></li>
+      <li role="separator" class="divider"></li>
+      <li><a class="dicks" ng-click="setLaneClosureDirection(4)">{{laneClosureDirection[4]}}</a></li>
+      <li role="separator" class="divider"></li>
+      <li><a class="dicks" ng-click="setLaneClosureDirection(5)">{{laneClosureDirection[5]}}</a></li>
+      <li role="separator" class="divider"></li>
+      <li><a class="dicks" ng-click="setLaneClosureDirection(6)">{{laneClosureDirection[6]}}</a></li>
+    </ul>
+  </div>
+
+
+</div>
+
+
+
+</div>
+
+
+<div class="alert alert-danger" ng-show="displayErrorMessage" display="none" role="alert">Please Select a Value for All Fields</div>
+
+
+
+
+<div class = "center">
+
+
+  <a ng-show="showContinueButton" ng-click="continueButton()" class="btn btn-lg btn-success">Next</a>
+
+</div>

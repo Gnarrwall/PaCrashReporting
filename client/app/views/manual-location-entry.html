@@ -1,0 +1,252 @@
+
+<style>
+
+body {
+
+  text-align: center;
+
+}
+
+#buttonDiv {
+
+
+  padding-bottom: 5%;
+
+}
+
+.text-right {
+
+  padding-top: 3%;
+  padding-bottom: 1%;
+
+}
+#pac-input {
+
+  width: 60%;
+  float:left;
+
+}
+
+.spacer {
+
+  padding-top: 2%;
+  padding-bottom: 2%;
+
+
+}
+
+
+
+
+#search {
+
+  background-image: url('images/ic_search_black_24dp_1x.png'); /* 16px x 16px */
+  background-color: transparent; /* make the button transparent */
+  background-repeat: no-repeat;  /* make the background image appear only once */
+
+}
+
+
+#home {
+
+  background-image: url('images/ic_location_searching_black_24dp_1x.png'); /* 16px x 16px */
+  background-color: transparent; /* make the button transparent */
+  background-repeat: no-repeat;  /* make the background image appear only once */
+
+
+}
+
+</style>
+
+
+<body ng-controller="ManualLocationEntryCtrl">
+
+
+<h3>Please Find The Correct Intersection</h3>
+
+    <!-- search/go to current location -->
+    <div class="text-right">
+        <div class="input-append text-right">
+
+
+        <input type="text" id="pac-input" ng-model="search"/>
+
+
+
+            <button class="btn" id = "search" type="button" ng-click="geoCode()"ng-disabled="search.length == 0" title="search" >
+              &nbsp;<i></i>
+            </button>
+            <button class="btn" id = "home" type="button" ng-click="gotoCurrentLocation()" title="current location">
+              &nbsp;<i></i>
+            </button>
+        </div>
+    </div>
+
+    <!-- map -->
+    <app-map style="height:400px;margin:0px;box-shadow:0 3px 25px black;"
+        center="loc"
+        markers="airports"
+    >
+    </app-map>
+
+    <!-- current location -->
+    <div class="text-info text-right">
+        {{loc.lat | lat:0}}, {{loc.lon | lon:0}}
+    </div>
+
+
+
+
+<div id="jumbotron" ng-show="haveGeocoded">
+
+
+
+  <div ng-show="haveGeocoded" class="panel panel-info">
+    <div class="panel-heading">To Be Completed for All Crashes</div>
+    <div class="panel-body">
+
+  <div class="input-group">
+    <input type="text" class="form-control" ng-model="geoCodeCoords[0]" aria-describedby="basic-addon2">
+    <span class="input-group-addon" >Lat | Long Coords</span>
+  </div>
+
+  <div class="spacer"></div>
+
+
+
+
+
+   <div class="input-group">
+     <input type="text" ng-model="geoCodeCoords[1]" class="form-control" aria-label="...">
+     <span class="input-group-addon" >Street</span>
+     <div class="input-group-btn">
+       <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{typeOfMainRoad}} <span class="caret"></span></button>
+       <ul class="dropdown-menu dropdown-menu-right">
+         <li><a class="dicks" ng-click="getRouteTypeOfMainRoad(0)">{{routeSigning[0]}}</a></li>
+         <li role="separator" class="divider"></li>
+         <li><a class="dicks" ng-click="getRouteTypeOfMainRoad(1)">{{routeSigning[1]}}</a></li>
+         <li role="separator" class="divider"></li>
+         <li><a class="dicks" ng-click="getRouteTypeOfMainRoad(2)">{{routeSigning[2]}}</a></li>
+         <li role="separator" class="divider"></li>
+         <li><a class="dicks" ng-click="getRouteTypeOfMainRoad(3)">{{routeSigning[3]}}</a></li>
+         <li role="separator" class="divider"></li>
+         <li><a class="dicks" ng-click="getRouteTypeOfMainRoad(4)">{{routeSigning[4]}}</a></li>
+         <li role="separator" class="divider"></li>
+         <li><a class="dicks" ng-click="getRouteTypeOfMainRoad(5)">{{routeSigning[5]}}</a></li>
+         <li role="separator" class="divider"></li>
+         <li><a class="dicks" ng-click="getRouteTypeOfMainRoad(6)">{{routeSigning[6]}}</a></li>
+         <li role="separator" class="divider"></li>
+         <li><a class="dicks" ng-click="getRouteTypeOfMainRoad(7)">{{routeSigning[7]}}</a></li>
+       </ul>
+     </div><!-- /btn-group -->
+   </div><!-- /input-group -->
+
+
+
+
+
+
+<div class="spacer"></div>
+
+<div class="input-group">
+<input type="text" class="form-control" ng-model="geoCodeCoords[2]"  aria-describedby="basic-addon2">
+<span class="input-group-addon" >County</span>
+</div>
+
+<div class="spacer"></div>
+
+<div class="input-group">
+<input type="text" class="form-control" ng-model="geoCodeCoords[3]"  aria-describedby="basic-addon2">
+<span class="input-group-addon" >Municipality</span>
+</div>
+
+<div class="spacer"></div>
+
+
+
+
+</div>
+</div>
+
+<!-------------For Intersection Crashes---------->
+<div ng-show="isIntersection" class="panel panel-info">
+  <div class="panel-heading">To Be Completed for Intersection Crashes</div>
+  <div class="panel-body">
+
+
+    <div class="input-group">
+      <input type="text" ng-model="intersectingRoadInfo[0]" class="form-control" aria-label="...">
+      <span class="input-group-addon" >Street</span>
+      <div class="input-group-btn">
+        <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{typeOfMainRoad}} <span class="caret"></span></button>
+        <ul class="dropdown-menu dropdown-menu-right">
+          <li><a class="dicks" ng-click="getRouteTypeOfMainRoad(0)">{{routeSigning[0]}}</a></li>
+          <li role="separator" class="divider"></li>
+          <li><a class="dicks" ng-click="getRouteTypeOfMainRoad(1)">{{routeSigning[1]}}</a></li>
+          <li role="separator" class="divider"></li>
+          <li><a class="dicks" ng-click="getRouteTypeOfMainRoad(2)">{{routeSigning[2]}}</a></li>
+          <li role="separator" class="divider"></li>
+          <li><a class="dicks" ng-click="getRouteTypeOfMainRoad(3)">{{routeSigning[3]}}</a></li>
+          <li role="separator" class="divider"></li>
+          <li><a class="dicks" ng-click="getRouteTypeOfMainRoad(4)">{{routeSigning[4]}}</a></li>
+          <li role="separator" class="divider"></li>
+          <li><a class="dicks" ng-click="getRouteTypeOfMainRoad(5)">{{routeSigning[5]}}</a></li>
+          <li role="separator" class="divider"></li>
+          <li><a class="dicks" ng-click="getRouteTypeOfMainRoad(6)">{{routeSigning[6]}}</a></li>
+          <li role="separator" class="divider"></li>
+          <li><a class="dicks" ng-click="getRouteTypeOfMainRoad(7)">{{routeSigning[7]}}</a></li>
+        </ul>
+      </div><!-- /btn-group -->
+    </div><!-- /input-group -->
+
+
+
+
+</div>
+</div>
+
+<!-------------For Mid-Block Crashes---------->
+<div ng-show="isMidBlock" class="panel panel-info">
+  <div class="panel-heading">To Be Completed for Mid Block Crashes</div>
+  <div class="panel-body">
+
+
+  <div class="input-group">
+    <input type="text" class="form-control" ng-model="intersectingRoadInfo[0]"  aria-describedby="basic-addon2">
+      <span class="input-group-addon" >Land Mark 1</span>
+  </div>
+
+  <div class="input-group">
+    <input type="text" class="form-control" ng-model="intersectingRoadInfo[1]"  aria-describedby="basic-addon2">
+      <span class="input-group-addon" >Land Mark 2</span>
+  </div>
+
+  <div class="input-group">
+    <input type="text" class="form-control" ng-model="intersectingRoadInfo[2]"  aria-describedby="basic-addon2">
+      <span class="input-group-addon" >Distance from Crash to Land Mark 1</span>
+  </div>
+
+
+</div>
+</div>
+
+
+
+
+
+
+</div>
+
+
+
+    <div id="buttonDiv">
+
+      <a ng-show="!haveGeocoded" ng-click="reverseGeocode()" class="btn btn-lg btn-info">GeoCode</a>
+      <a ng-show="haveGeocoded" ng-click="continue()" class="btn btn-lg btn-success">Next</a>
+
+    </div>
+
+
+
+
+</body>

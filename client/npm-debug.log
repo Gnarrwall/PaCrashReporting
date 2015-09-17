@@ -1,0 +1,207 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'node', '/usr/local/bin/npm', 'install', 'compass' ]
+2 info using npm@2.11.3
+3 info using node@v0.12.7
+4 verbose install initial load of /Users/DYJ/Desktop/Summer Projects/meanapp/server/client/package.json
+5 warn package.json client@0.0.0 No license field.
+6 verbose installManyTop reading scoped package data from /Users/DYJ/Desktop/Summer Projects/meanapp/server/client/node_modules/compass/package.json
+7 verbose installManyTop reading scoped package data from /Users/DYJ/Desktop/Summer Projects/meanapp/server/client/node_modules/grunt/package.json
+8 verbose installManyTop reading scoped package data from /Users/DYJ/Desktop/Summer Projects/meanapp/server/client/node_modules/grunt-autoprefixer/package.json
+9 verbose installManyTop reading scoped package data from /Users/DYJ/Desktop/Summer Projects/meanapp/server/client/node_modules/grunt-concurrent/package.json
+10 verbose installManyTop reading scoped package data from /Users/DYJ/Desktop/Summer Projects/meanapp/server/client/node_modules/grunt-contrib-clean/package.json
+11 verbose installManyTop reading scoped package data from /Users/DYJ/Desktop/Summer Projects/meanapp/server/client/node_modules/grunt-contrib-compass/package.json
+12 verbose installManyTop reading scoped package data from /Users/DYJ/Desktop/Summer Projects/meanapp/server/client/node_modules/grunt-contrib-concat/package.json
+13 verbose installManyTop reading scoped package data from /Users/DYJ/Desktop/Summer Projects/meanapp/server/client/node_modules/grunt-contrib-connect/package.json
+14 verbose installManyTop reading scoped package data from /Users/DYJ/Desktop/Summer Projects/meanapp/server/client/node_modules/grunt-contrib-copy/package.json
+15 verbose installManyTop reading scoped package data from /Users/DYJ/Desktop/Summer Projects/meanapp/server/client/node_modules/grunt-contrib-cssmin/package.json
+16 verbose installManyTop reading scoped package data from /Users/DYJ/Desktop/Summer Projects/meanapp/server/client/node_modules/grunt-contrib-htmlmin/package.json
+17 verbose installManyTop reading scoped package data from /Users/DYJ/Desktop/Summer Projects/meanapp/server/client/node_modules/grunt-contrib-imagemin/package.json
+18 verbose installManyTop reading scoped package data from /Users/DYJ/Desktop/Summer Projects/meanapp/server/client/node_modules/grunt-contrib-jshint/package.json
+19 verbose installManyTop reading scoped package data from /Users/DYJ/Desktop/Summer Projects/meanapp/server/client/node_modules/grunt-contrib-uglify/package.json
+20 verbose installManyTop reading scoped package data from /Users/DYJ/Desktop/Summer Projects/meanapp/server/client/node_modules/grunt-contrib-watch/package.json
+21 verbose installManyTop reading scoped package data from /Users/DYJ/Desktop/Summer Projects/meanapp/server/client/node_modules/grunt-filerev/package.json
+22 verbose installManyTop reading scoped package data from /Users/DYJ/Desktop/Summer Projects/meanapp/server/client/node_modules/grunt-google-cdn/package.json
+23 verbose installManyTop reading scoped package data from /Users/DYJ/Desktop/Summer Projects/meanapp/server/client/node_modules/grunt-karma/package.json
+24 verbose installManyTop reading scoped package data from /Users/DYJ/Desktop/Summer Projects/meanapp/server/client/node_modules/grunt-newer/package.json
+25 verbose installManyTop reading scoped package data from /Users/DYJ/Desktop/Summer Projects/meanapp/server/client/node_modules/grunt-ng-annotate/package.json
+26 verbose installManyTop reading scoped package data from /Users/DYJ/Desktop/Summer Projects/meanapp/server/client/node_modules/grunt-svgmin/package.json
+27 verbose installManyTop reading scoped package data from /Users/DYJ/Desktop/Summer Projects/meanapp/server/client/node_modules/grunt-usemin/package.json
+28 verbose installManyTop reading scoped package data from /Users/DYJ/Desktop/Summer Projects/meanapp/server/client/node_modules/grunt-wiredep/package.json
+29 verbose installManyTop reading scoped package data from /Users/DYJ/Desktop/Summer Projects/meanapp/server/client/node_modules/jasmine-core/package.json
+30 verbose installManyTop reading scoped package data from /Users/DYJ/Desktop/Summer Projects/meanapp/server/client/node_modules/jshint-stylish/package.json
+31 verbose installManyTop reading scoped package data from /Users/DYJ/Desktop/Summer Projects/meanapp/server/client/node_modules/karma/package.json
+32 verbose installManyTop reading scoped package data from /Users/DYJ/Desktop/Summer Projects/meanapp/server/client/node_modules/karma-jasmine/package.json
+33 verbose installManyTop reading scoped package data from /Users/DYJ/Desktop/Summer Projects/meanapp/server/client/node_modules/karma-phantomjs-launcher/package.json
+34 verbose installManyTop reading scoped package data from /Users/DYJ/Desktop/Summer Projects/meanapp/server/client/node_modules/load-grunt-tasks/package.json
+35 verbose installManyTop reading scoped package data from /Users/DYJ/Desktop/Summer Projects/meanapp/server/client/node_modules/npm-debug.log/package.json
+36 verbose installManyTop reading scoped package data from /Users/DYJ/Desktop/Summer Projects/meanapp/server/client/node_modules/phantomjs/package.json
+37 verbose installManyTop reading scoped package data from /Users/DYJ/Desktop/Summer Projects/meanapp/server/client/node_modules/time-grunt/package.json
+38 info package.json grunt@0.4.5 No license field.
+39 info package.json grunt-contrib-clean@0.6.0 No license field.
+40 info package.json grunt-contrib-compass@1.0.3 No license field.
+41 info package.json grunt-contrib-concat@0.5.1 No license field.
+42 info package.json grunt-contrib-connect@0.9.0 No license field.
+43 info package.json grunt-contrib-copy@0.7.0 No license field.
+44 info package.json grunt-contrib-cssmin@0.12.3 No license field.
+45 info package.json grunt-contrib-htmlmin@0.4.0 No license field.
+46 info package.json grunt-contrib-imagemin@0.9.4 No license field.
+47 info package.json grunt-contrib-uglify@0.7.0 No license field.
+48 info package.json grunt-contrib-watch@0.6.1 No license field.
+49 info package.json grunt-filerev@2.3.1 license should be a valid SPDX license expression
+50 info package.json grunt-google-cdn@0.4.3 license should be a valid SPDX license expression
+51 info package.json grunt-svgmin@2.0.1 No license field.
+52 info package.json grunt-wiredep@2.0.0 No license field.
+53 info package.json phantomjs@1.9.17 No license field.
+54 verbose readDependencies loading dependencies from /Users/DYJ/Desktop/Summer Projects/meanapp/server/client/package.json
+55 verbose install compass is installed as 0.1.1
+56 silly cache add args [ 'compass', null ]
+57 verbose cache add spec compass
+58 silly cache add parsed spec { raw: 'compass',
+58 silly cache add   scope: null,
+58 silly cache add   name: 'compass',
+58 silly cache add   rawSpec: '',
+58 silly cache add   spec: '*',
+58 silly cache add   type: 'range' }
+59 silly addNamed compass@*
+60 verbose addNamed "*" is a valid semver range for compass
+61 silly addNameRange { name: 'compass', range: '*', hasData: false }
+62 silly mapToRegistry name compass
+63 silly mapToRegistry using default registry
+64 silly mapToRegistry registry https://registry.npmjs.org/
+65 silly mapToRegistry uri https://registry.npmjs.org/compass
+66 verbose addNameRange registry:https://registry.npmjs.org/compass not in flight; fetching
+67 verbose request uri https://registry.npmjs.org/compass
+68 verbose request no auth needed
+69 info attempt registry request try #1 at 5:58:30 PM
+70 verbose request id 6a5070112e4560f9
+71 verbose etag "5LH6SCHEQBUQPVJSFYLAOP04U"
+72 http request GET https://registry.npmjs.org/compass
+73 http 304 https://registry.npmjs.org/compass
+74 silly get cb [ 304,
+74 silly get   { date: 'Wed, 16 Sep 2015 21:58:30 GMT',
+74 silly get     via: '1.1 varnish',
+74 silly get     'cache-control': 'max-age=60',
+74 silly get     etag: '"5LH6SCHEQBUQPVJSFYLAOP04U"',
+74 silly get     age: '0',
+74 silly get     connection: 'keep-alive',
+74 silly get     'x-served-by': 'cache-atl6230-ATL',
+74 silly get     'x-cache': 'HIT',
+74 silly get     'x-cache-hits': '1',
+74 silly get     'x-timer': 'S1442440710.856802,VS0,VE85',
+74 silly get     vary: 'Accept' } ]
+75 verbose etag https://registry.npmjs.org/compass from cache
+76 verbose get saving compass to /Users/DYJ/.npm/registry.npmjs.org/compass/.cache.json
+77 silly addNameRange number 2 { name: 'compass', range: '*', hasData: true }
+78 silly addNameRange versions [ 'compass', [ '0.1.0', '0.1.1' ] ]
+79 silly addNamed compass@0.1.1
+80 verbose addNamed "0.1.1" is a plain semver version for compass
+81 silly mapToRegistry name compass
+82 silly mapToRegistry using default registry
+83 silly mapToRegistry registry https://registry.npmjs.org/
+84 silly mapToRegistry uri https://registry.npmjs.org/compass
+85 verbose addRemoteTarball https://registry.npmjs.org/compass/-/compass-0.1.1.tgz not in flight; adding
+86 verbose addRemoteTarball [ 'https://registry.npmjs.org/compass/-/compass-0.1.1.tgz',
+86 verbose addRemoteTarball   '5c56d5eb442d10c1ad5989ef5c5e925db60c60e1' ]
+87 info retry fetch attempt 1 at 5:58:31 PM
+88 info attempt registry request try #1 at 5:58:31 PM
+89 http fetch GET https://registry.npmjs.org/compass/-/compass-0.1.1.tgz
+90 http fetch 200 https://registry.npmjs.org/compass/-/compass-0.1.1.tgz
+91 silly fetchAndShaCheck shasum 5c56d5eb442d10c1ad5989ef5c5e925db60c60e1
+92 verbose addTmpTarball /var/folders/m9/nb_c6m7x78x792vksbq4v8kw0000gn/T/npm-11606-c60e83fb/registry.npmjs.org/compass/-/compass-0.1.1.tgz not in flight; adding
+93 verbose addTmpTarball already have metadata; skipping unpack for compass@0.1.1
+94 silly cache afterAdd compass@0.1.1
+95 verbose afterAdd /Users/DYJ/.npm/compass/0.1.1/package/package.json not in flight; writing
+96 verbose afterAdd /Users/DYJ/.npm/compass/0.1.1/package/package.json written
+97 silly install resolved [ { name: 'compass',
+97 silly install resolved     version: '0.1.1',
+97 silly install resolved     description: 'Compass for node.js',
+97 silly install resolved     main: 'index.js',
+97 silly install resolved     scripts: { test: 'echo "Error: no test specified" && exit 1' },
+97 silly install resolved     repository: { type: 'git', url: 'git@github.com:ngryman/compass.git' },
+97 silly install resolved     keywords: [ 'compass', 'sass', 'scss' ],
+97 silly install resolved     author: { name: 'Nicolas Gryman' },
+97 silly install resolved     license: 'MIT',
+97 silly install resolved     devDependencies:
+97 silly install resolved      { mocha: '1.8.x',
+97 silly install resolved        chai: '1.5.x',
+97 silly install resolved        express: '3.1.x',
+97 silly install resolved        supertest: '0.5.x' },
+97 silly install resolved     gitHead: '219e69e47f590d8906e203844f6fe8ae761d3240',
+97 silly install resolved     bugs: { url: 'https://github.com/ngryman/compass/issues' },
+97 silly install resolved     homepage: 'https://github.com/ngryman/compass',
+97 silly install resolved     _id: 'compass@0.1.1',
+97 silly install resolved     _shasum: '5c56d5eb442d10c1ad5989ef5c5e925db60c60e1',
+97 silly install resolved     _from: 'compass@*',
+97 silly install resolved     _npmVersion: '1.4.28',
+97 silly install resolved     _npmUser: { name: 'ngryman', email: 'ngryman@gmail.com' },
+97 silly install resolved     maintainers: [ [Object] ],
+97 silly install resolved     dist:
+97 silly install resolved      { shasum: '5c56d5eb442d10c1ad5989ef5c5e925db60c60e1',
+97 silly install resolved        tarball: 'http://registry.npmjs.org/compass/-/compass-0.1.1.tgz' },
+97 silly install resolved     directories: {},
+97 silly install resolved     _resolved: 'https://registry.npmjs.org/compass/-/compass-0.1.1.tgz' } ]
+98 info install compass@0.1.1 into /Users/DYJ/Desktop/Summer Projects/meanapp/server/client
+99 info installOne compass@0.1.1
+100 verbose installOne of compass to /Users/DYJ/Desktop/Summer Projects/meanapp/server/client not in flight; installing
+101 verbose lock using /Users/DYJ/.npm/_locks/compass-542f841ac68975af.lock for /Users/DYJ/Desktop/Summer Projects/meanapp/server/client/node_modules/compass
+102 silly install write writing compass 0.1.1 to /Users/DYJ/Desktop/Summer Projects/meanapp/server/client/node_modules/compass
+103 verbose unbuild node_modules/compass
+104 info preuninstall compass@0.1.1
+105 info uninstall compass@0.1.1
+106 verbose unbuild rmStuff compass@0.1.1 from /Users/DYJ/Desktop/Summer Projects/meanapp/server/client/node_modules
+107 info postuninstall compass@0.1.1
+108 silly gentlyRm /Users/DYJ/Desktop/Summer Projects/meanapp/server/client/node_modules/compass is being purged from base /Users/DYJ/Desktop/Summer Projects/meanapp/server/client
+109 verbose gentlyRm don't care about contents; nuking /Users/DYJ/Desktop/Summer Projects/meanapp/server/client/node_modules/compass
+110 silly vacuum-fs purging /Users/DYJ/Desktop/Summer Projects/meanapp/server/client/node_modules/compass
+111 silly vacuum-fs quitting because other entries in /Users/DYJ/Desktop/Summer Projects/meanapp/server/client/node_modules
+112 verbose tar unpack /Users/DYJ/.npm/compass/0.1.1/package.tgz
+113 verbose tar unpacking to /Users/DYJ/Desktop/Summer Projects/meanapp/server/client/node_modules/compass
+114 silly gentlyRm /Users/DYJ/Desktop/Summer Projects/meanapp/server/client/node_modules/compass is being purged
+115 verbose gentlyRm don't care about contents; nuking /Users/DYJ/Desktop/Summer Projects/meanapp/server/client/node_modules/compass
+116 silly gunzTarPerm modes [ '755', '644' ]
+117 silly gunzTarPerm extractEntry package.json
+118 silly gunzTarPerm extractEntry .npmignore
+119 silly gunzTarPerm extractEntry README.md
+120 silly gunzTarPerm extractEntry index.js
+121 silly gunzTarPerm extractEntry lib/compass.js
+122 silly gunzTarPerm extractEntry test/compass.js
+123 silly gunzTarPerm extractEntry test/fixtures/config.rb
+124 silly gunzTarPerm extractEntry test/fixtures/sass/_base.scss
+125 silly gunzTarPerm extractEntry test/fixtures/sass/style.scss
+126 verbose write writing to /Users/DYJ/Desktop/Summer Projects/meanapp/server/client/node_modules/compass/package.json
+127 info preinstall compass@0.1.1
+128 verbose readDependencies loading dependencies from /Users/DYJ/Desktop/Summer Projects/meanapp/server/client/node_modules/compass/package.json
+129 verbose readDependencies loading dependencies from /Users/DYJ/Desktop/Summer Projects/meanapp/server/client/node_modules/compass/package.json
+130 silly install resolved []
+131 verbose about to build /Users/DYJ/Desktop/Summer Projects/meanapp/server/client/node_modules/compass
+132 info build /Users/DYJ/Desktop/Summer Projects/meanapp/server/client/node_modules/compass
+133 info linkStuff compass@0.1.1
+134 silly linkStuff compass@0.1.1 has /Users/DYJ/Desktop/Summer Projects/meanapp/server/client/node_modules as its parent node_modules
+135 verbose linkBins compass@0.1.1
+136 verbose linkMans compass@0.1.1
+137 verbose rebuildBundles compass@0.1.1
+138 info install compass@0.1.1
+139 info postinstall compass@0.1.1
+140 verbose unlock done using /Users/DYJ/.npm/_locks/compass-542f841ac68975af.lock for /Users/DYJ/Desktop/Summer Projects/meanapp/server/client/node_modules/compass
+141 verbose validateInstall loading /Users/DYJ/Desktop/Summer Projects/meanapp/server/client/package.json for validation
+142 verbose stack Error: The package karma does not satisfy its siblings' peerDependencies requirements!
+142 verbose stack     at /usr/local/lib/node_modules/npm/lib/install.js:125:32
+142 verbose stack     at /usr/local/lib/node_modules/npm/lib/install.js:267:7
+142 verbose stack     at /usr/local/lib/node_modules/npm/node_modules/read-installed/read-installed.js:138:5
+142 verbose stack     at /usr/local/lib/node_modules/npm/node_modules/read-installed/read-installed.js:251:14
+142 verbose stack     at cb (/usr/local/lib/node_modules/npm/node_modules/slide/lib/async-map.js:47:24)
+142 verbose stack     at /usr/local/lib/node_modules/npm/node_modules/read-installed/read-installed.js:251:14
+142 verbose stack     at cb (/usr/local/lib/node_modules/npm/node_modules/slide/lib/async-map.js:47:24)
+142 verbose stack     at /usr/local/lib/node_modules/npm/node_modules/read-installed/read-installed.js:251:14
+142 verbose stack     at cb (/usr/local/lib/node_modules/npm/node_modules/slide/lib/async-map.js:47:24)
+142 verbose stack     at /usr/local/lib/node_modules/npm/node_modules/read-installed/read-installed.js:251:14
+143 verbose cwd /Users/DYJ/Desktop/Summer Projects/meanapp/server/client
+144 error Darwin 14.5.0
+145 error argv "node" "/usr/local/bin/npm" "install" "compass"
+146 error node v0.12.7
+147 error npm  v2.11.3
+148 error code EPEERINVALID
+149 error peerinvalid The package karma does not satisfy its siblings' peerDependencies requirements!
+149 error peerinvalid Peer grunt-karma@0.12.1 wants karma@^0.13.0 || >= 0.14.0-rc.0
+149 error peerinvalid Peer karma-phantomjs-launcher@0.2.1 wants karma@>=0.9
+150 verbose exit [ 1, true ]

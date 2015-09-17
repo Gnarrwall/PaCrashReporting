@@ -1,0 +1,78 @@
+
+<style>
+
+#headText {
+
+  font-size: 200%;
+   padding-bottom: 5%;
+}
+
+#button {
+
+  width: auto;
+  text-align: center;
+
+}
+
+.dicks {
+
+
+  cursor: pointer;
+  role="button";
+}
+
+.centerIt {
+
+  text-align: center;
+  margin-bottom: 5%;
+
+}
+
+</style>
+
+
+
+<div class="jumbotron">
+
+
+  <h1 id=headText >What was the location type of the crash?</h1>
+
+  <!-- Split button -->
+  <div class="btn-group">
+    <button id="button" type="button" class="btn btn-info">{{typeOfCrash}}</button>
+    <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      <span class="caret"></span>
+      <span class="sr-only">Toggle Dropdown</span>
+    </button>
+    <ul class="dropdown-menu">
+      <li><a class="dicks" ng-click="setType(0)">Midblock</a></li>
+      <li role="separator" class="divider"></li>
+      <li><a class="dicks" ng-click="setType(1)">4 Way Intersection</a></li>
+      <li role="separator" class="divider"></li>
+      <li><a class="dicks" ng-click="setType(2)">"T" Intersection</a></li>
+      <li role="separator" class="divider"></li>
+      <li><a class="dicks" ng-click="setType(3)">"Y" Intersection</a></li>
+      <li role="separator" class="divider"></li>
+      <li><a class="dicks" ng-click="setType(4)">Traffic Circle</a></li>
+      <li role="separator" class="divider"></li>
+      <li><a class="dicks" ng-click="setType(5)">Multi-Leg Intersection</a></li>
+      <li role="separator" class="divider"></li>
+      <li><a class="dicks" ng-click="setType(6)">On Ramp</a></li>
+      <li role="separator" class="divider"></li>
+      <li><a class="dicks" ng-click="setType(7)">Off Ramp</a></li>
+      <li role="separator" class="divider"></li>
+      <li><a class="dicks" ng-click="setType(8)">Railroad Crossing</a></li>
+      <li role="separator" class="divider"></li>
+      <li><a class="dicks" ng-click="setType(9)">Other</a></li>
+    </ul>
+  </div>
+
+
+
+</div>
+
+<div class="centerIt">
+
+<a id = "b1" ng-show="selected" ng-click="continue()" class="btn btn-lg btn-success">Next</a>
+
+</div>
